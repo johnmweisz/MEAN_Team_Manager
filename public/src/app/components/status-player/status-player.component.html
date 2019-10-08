@@ -1,0 +1,15 @@
+<div>
+        <h3>Players</h3>
+        <div *ngFor="let player of players">
+            <p>Name: {{ player.name }}</p>
+            <div *ngIf="game == 1">
+                    <button [ngClass]="{'Playing': (player.status1 == 'Playing')}" type="button" (click)="updatePlayer(player._id, 'Playing')">Playing</button> | <button [ngClass]="{'Not-Playing': (player.status1 == 'Not Playing')}" type="button" (click)="updatePlayer(player._id, 'Not Playing')">Not Playing</button> | <button [ngClass]="{'Undecided': (player.status1 == 'Undecided')}" type="button" (click)="updatePlayer(player._id, 'Undecided')">Undecided</button>
+            </div>
+            <div *ngIf="game == 2">
+                        <button [ngClass]="{'Playing': (player.status2 == 'Playing')}" type="button" (click)="updatePlayer(player._id, 'Playing')">Playing</button> | <button [ngClass]="{'Not-Playing': (player.status2 == 'Not Playing')}" type="button" (click)="updatePlayer(player._id, 'Not Playing')">Not Playing</button> | <button [ngClass]="{'Undecided': (player.status2 == 'Undecided')}" type="button" (click)="updatePlayer(player._id, 'Undecided')">Undecided</button>
+            </div>
+            <div *ngIf="game == 3">
+                        <button [ngClass]="{'Playing': (player.status3 == 'Playing')}" type="button" (click)="updatePlayer(player._id, 'Playing')">Playing</button> | <button [ngClass]="{'Not-Playing': (player.status3 == 'Not Playing')}" type="button" (click)="updatePlayer(player._id, 'Not Playing')">Not Playing</button> | <button [ngClass]="{'Undecided': (player.status3 == 'Undecided')}" type="button" (click)="updatePlayer(player._id, 'Undecided')">Undecided</button>
+            </div>
+        </div>
+    </div>

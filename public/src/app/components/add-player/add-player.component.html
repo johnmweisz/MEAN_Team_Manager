@@ -1,0 +1,15 @@
+<div>
+    <h3>Add Player</h3>
+    <form #valForm='ngForm' (ngSubmit)="createPlayer()">
+        Name:<input type="text" name="name" required minlength="4" #valName='ngModel' [(ngModel)]="name">
+        <div *ngIf="errors">
+            <p *ngIf="errors.name">{{ errors.name.message }}</p>
+        </div>
+        Position:<input type="text" name="position" #valPosition='ngModel' [(ngModel)]="position">
+        <div *ngIf="errors">
+            <p *ngIf="errors.status">{{ errors.status.message }}</p>
+        </div>
+        <button *ngIf="!valForm.valid" type="button">Invalid</button>
+        <button *ngIf="valForm.valid" type="submit">submit</button>
+    </form>
+</div>

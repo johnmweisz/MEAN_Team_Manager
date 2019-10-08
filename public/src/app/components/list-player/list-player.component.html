@@ -1,0 +1,8 @@
+<div>
+    <h3>Players</h3>
+    <div *ngFor="let player of players">
+        <p>Name: {{ player.name }}</p>
+        <p>Position: {{ player.position }}</p>
+    <button (click)="deletePlayer(player._id)">Delete</button>
+    </div>
+</div>

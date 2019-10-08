@@ -1,0 +1,18 @@
+.ng-untouched {
+    color: blue;
+ }
+.ng-touched { 
+    color: black;
+}
+.ng-dirty {
+    color: orange;
+ }
+.ng-pristine {
+    color: grey;
+ }
+ .ng-invalid { 
+    color: red;
+}
+.ng-valid {
+    color: green;
+ }
